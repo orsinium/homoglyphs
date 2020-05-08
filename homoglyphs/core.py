@@ -63,7 +63,7 @@ class Categories:
 
         # try detect category by unicodedata
         try:
-            category = unicodedata.name(char).split()[0]
+            category = unicodedata.name(char, default='UNKNOWN').split()[0]
         except TypeError:
             # In Python2 unicodedata.name raise error for non-unicode chars
             pass
